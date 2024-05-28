@@ -1451,30 +1451,72 @@ h6 {
   }
 }
 @media (min-width: 992px) {
-  .about__list {
-    display: flex;
-    justify-content: space-between;
-  }
-  .navbar {
-    display: none;
-  }
-  .header {
-    background-color: #323233;
-  }
-  .header__content {
-    height: 670px;
-    background-position: 90% 60%;
-  }
-  .logo img {
-    width: 131px;
-    height: 65px;
-  }
-  .contacts__item {
-    font-size: 14px;
-    color: #979799;
-    font-weight: 900;
-  }
-  .contacts__item a {
-    color: #fff;
-  }
+    .about__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        background-color: #323233;
+        ;
+    }
+
+    .header__content {
+        height: 670px;
+        background-position: 90% 60%;
+    }
+
+    .logo {
+        img {
+            width: 131px;
+            height: 65px;
+        }
+    }
+
+    .contacts__item {
+        font-size: 14px;
+        color: #979799;
+        font-weight: 900;
+
+        a {
+            color: #fff;
+        }
+    }
+    .swiper-person {
+        min-height: 0;
+    }
+    .swiper-person__info {
+        display: flex;
+        width: 992px;
+    }
+    .swiper-person__list {
+        overflow: hidden;
+        width: 992px;
+        padding-left: 20px;
+        order: -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .swiper-person__name-wrapper {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+    .swiper-person__img {
+        padding-left: 200px;
+    }
+    .swiper-person__shadow {
+        left: 82%;
+    }
+    .career {
+        min-height: 0;
+    }
+    .career__wrapper {
+        padding-bottom: 10px;
+    }
 }
