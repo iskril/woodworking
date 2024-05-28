@@ -217,10 +217,10 @@ const swiper = new Swiper(".swiper", {
     }
 });
 const swiperPerson = new Swiper(".swiper-person", {
-    effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 1,
+    spaceBetween: 30,
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
