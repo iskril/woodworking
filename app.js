@@ -197,10 +197,17 @@ accordions.forEach(el => {
     });
 });
 const swiper = new Swiper(".swiper", {
-    effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 3,
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+    },
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -237,3 +244,14 @@ const swiperPerson = new Swiper(".swiper-person", {
     }
 });
 
+/// ps
+window.addEventListener('scroll', () => {
+    const shadow = document.querySelectorAll('.swiper-person__shadow'),
+        content = document.querySelector('.swiper-wrapper');
+
+    if (window.scrollY >= content.getBoundingClientRect().top + window.scrollY) {
+        for (let item of shadow) {
+            item.classList.add('anime')
+        }
+    }
+})
